@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+header {
+  font-size: 3em;
+}
+
+#root {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "navbar" "main";
+}
+
+#navbar {
+  padding: 10px;
+  grid-area: navbar;
+  border: 1px solid #adabab;
+  width: 30vw;
+}
+
+.nav-container > header {
+  font-size: 2rem;
+  color: aqua;
+}
+
+.nav-container {
+  position: fixed;
+}
+
+#list-link {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-link {
+  margin: 10px;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: 500;
+  font-style: oblique;
+}
+
+code {
+  background-color: #eeeeee;
+  padding: 10px;
+  width: fit-content;
+  letter-spacing: 2px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+p {
+  text-align: left;
+  word-spacing: 2px;
+  line-height: 2;
+}
+
+#main-doc {
+  grid-area: main;
+}
+
+.main-section {
+  margin: 10px;
+}
+
+article {
+  margin: 10px;
+  display: grid;
+  gap: 10px;
+}
+
+ul {
+  margin: 20px;
+}
+
+@media (min-width: 768px) {
+  #root {
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "navbar main";
+  }
+}
